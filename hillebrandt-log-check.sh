@@ -75,7 +75,7 @@ format=" %-10s %8s %10s\n"
 width=43
 
 # Top 10 requested URL.
-synthesis_nginx_most_requested_url() {
+lebrandt_nginx_most_requested_url() {
     cd /var/log/nginx
     if [[ "$site" = "All" ]]; then
         echo " "
@@ -101,7 +101,7 @@ synthesis_nginx_most_requested_url() {
 }
 
 # Top 10 static content requested (images, scripts, etc.).
-synthesis_nginx_most_requested_static() {
+lebrandt_nginx_most_requested_static() {
     cd /var/log/nginx
     if [[ "$site" = "All" ]]; then
         echo " "
@@ -128,7 +128,7 @@ synthesis_nginx_most_requested_static() {
 
 # Analizes the php-fpm access log and returns the most requested URIs, the requests that demanded more PHP memory, the requests that demanded more of the CPU and
 # the requests that took more time to serve.
-synthesis_php_access_log() {
+lebrandt_php_access_log() {
     if [[ "$site" = "All" ]]; then
         site=""
         cd /var/log/
@@ -229,7 +229,7 @@ synthesis_php_access_log() {
 }
 
 # Lists and groups recurring Notices, Warnings and Fatal errors in php.log:
-synthesis_php_log() {
+lebrandt_php_log() {
     if [[ "$site" = "All" ]]; then
         site=""
     fi
@@ -255,7 +255,7 @@ synthesis_php_log() {
 
 validation
 choose_site
-synthesis_nginx_most_requested_url
-synthesis_nginx_most_requested_static
-synthesis_php_access_log
-synthesis_php_log
+lebrandt_nginx_most_requested_url
+lebrandt_nginx_most_requested_static
+lebrandt_php_access_log
+lebrandt_php_log

@@ -10,7 +10,7 @@
 
 ## 1- The Script:
 
-This script was built to help sys-admins to identify performance and critical issues in web servers hosting WordPress installs. You can choose either to analise a specific website hosted in your server or all sites at once. This script generates the following report list:
+This script was built to help sys-admins to identify performance and critical issues in web servers hosting WordPress installs. You can choose either to analyse a specific website hosted in your server or all sites at once. This script generates the following report list:
 
 (From NGINX and/or Apache access log:)
 
