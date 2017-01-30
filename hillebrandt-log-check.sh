@@ -9,7 +9,7 @@
 #          License URI: http://www.gnu.org/licenses/gpl.html
 #          Description: This script generates a report listing:
 #
-#          (From NGINX and/or Apache access log:)
+#          (From NGINX access log:)
 #
 #          - The most requested URIs.
 #          - The most requested static content.
@@ -39,10 +39,6 @@
 #               log_format vhost '$remote_addr - $remote_user [$time_local] '
 #                    '"$request" $status $body_bytes_sent '
 #                    '"$http_referer" "$http_user_agent" "$proxy_add_x_forwarded_for"' ;
-#
-#            * Apache log format:
-#
-#               LogFormat "%a %l %u %t \"%r\" %>s %O \"%{Referer}i\" \"%{User-Agent}i\" %D" combined
 # ------------------------------------------------------------------
 validation() {
     if [[ "$(id -u)" != "0" ]]; then

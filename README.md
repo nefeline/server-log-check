@@ -12,7 +12,7 @@
 
 This script was built to help sys-admins to identify performance and critical issues in web servers hosting WordPress installs. You can choose either to analyse a specific website hosted in your server or all sites at once. This script generates the following report list:
 
-(From NGINX and/or Apache access log:)
+(From NGINX access log:)
 
 - The most requested URIs.
 - The most requested static content.
@@ -32,11 +32,11 @@ grouped and sorted.
 
 ## 2- Dependencies:
 
-This script was built to work with Ubuntu web servers running Apache or Nginx with php-fpm and PHP.
+This script was built to work with Ubuntu web servers running Nginx with php-fpm.
 
 Built to work with these log formats:
 
-- PHP-fpm:
+- PHP-fpm log format:
 
    access.format = "%{mega}MMb %{mili}dms pid=%p %C%% %R - %u %t \"%m %r%Q%q\" %s %f"
 
@@ -45,10 +45,6 @@ Built to work with these log formats:
    log_format vhost '$remote_addr - $remote_user [$time_local] '
         '"$request" $status $body_bytes_sent '
         '"$http_referer" "$http_user_agent" "$proxy_add_x_forwarded_for"' ;
-
-- Apache log format:
-
-   LogFormat "%a %l %u %t \"%r\" %>s %O \"%{Referer}i\" \"%{User-Agent}i\" %D" combined
 
 ## 3- How to install:
 
